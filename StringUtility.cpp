@@ -26,3 +26,15 @@ const int is_whitespace_or_null(const char* string) {
 		string++;
 	}
 }
+const char* index_of_or_null(const char* string, const char ch) {
+	if (is_empty_or_null(string)) {
+		return NULL;
+	}
+	while (*string != '\0') {
+		if (*string == ch) {
+			return string;
+		}
+		string++;
+	}
+	return NULL;
+}
